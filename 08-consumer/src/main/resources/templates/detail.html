@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+</head>
+<body>
+
+<!--<div th:object="${student}">
+    id：<span th:text="*{id}">000</span><br>
+    姓名：<span th:text="*{name}">000</span><br>
+    年龄：<span th:text="*{age}">000</span><br>
+</div>-->
+
+id：<span th:text="${student.id}">000</span><br>
+姓名：<span th:text="${student.name}">000</span><br>
+年龄：<span th:text="${student.age}">000</span><br>
+
+<hr>
+<a th:href="@{/student/getCount.do}">获取总人数</a><br>
+总人数：<span th:text="${count}">0</span>
+<hr>
+
+<div th:inline="text">
+    总人数：[[${count}]]
+</div>
+
+
+</body>
+</html>
